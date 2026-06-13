@@ -72,9 +72,80 @@ body{
 }
 
 .right{
-    flex:1;
-    text-align:center;
+    flex: 1;
+    text-align: center;
+    position: relative;
 }
+
+.right::before{
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 123, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(80px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glowMove 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+.right img{
+    max-width: 100%;
+    animation: heroFloat 4s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes glowMove{
+    0%,100%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50%{
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+}
+
+.right{
+    flex: 1;
+    text-align: center;
+}
+
+.right img{
+    max-width: 100%;
+    height: auto;
+    animation: heroFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+}
+
+/* Hero Image Animation */
+@keyframes heroFloat{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-15px) rotate(2deg);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    75%{
+        transform: translateY(-15px) rotate(-2deg);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 
 .left h1{
     font-size:55px;
