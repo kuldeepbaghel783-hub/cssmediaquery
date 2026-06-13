@@ -1,56 +1,83 @@
-# Laundry Service Hero Section Website
+## Responsive Laundry Service Landing Page
 
 ## Project Overview
-This project is a responsive Laundry Service landing page developed using HTML and CSS. The webpage contains a navigation bar and a hero section designed according to the assignment requirements.
 
+This project is a responsive Laundry Service Landing Page created using HTML and CSS. The webpage includes a navigation bar, hero section, call-to-action button, and a mobile-friendly navigation menu.
 
+The design adapts to different screen sizes using CSS Media Queries and Flexbox.
 
+---
 
+## Features
 
-
-### Navbar
-- Logo on the left side
-- Navigation links:
+### Desktop View
+- Logo section
+- Navigation links
   - Home
   - Services
   - About Us
   - Contact Us
-- Username button on the right side
-- No Flexbox used
+- Username button
+- Hero section with:
+  - Heading
+  - Description
+  - Service booking button
+  - Laundry image
 
-### Hero Section
-- Two divisions:
-  - Left Division
-    - Main Heading
-    - Description
-    - "Book a Service Today" button
-  - Right Division
-    - Laundry illustration/image
+### Mobile View
+- Navigation links are hidden.
+- Menu icon (☰) is displayed.
+- Clicking the menu icon opens a sidebar menu.
+- Sidebar menu contains:
+  - Home
+  - Services
+  - About Us
+  - Contact Us
+- Built using only HTML and CSS.
+- No JavaScript used.
 
-### Responsive Design
-- Desktop View
-- Tablet View
-- Mobile View
-- Small Mobile View
-
-
+---
 
 ## Technologies Used
 
 - HTML5
 - CSS3
+- Flexbox
 - Media Queries
 
 
 
-## Files Included
+## Folder Structure
 
-```text
-Laundry-Service/
-│
-├── index.html
-├── style.css
-└── README.md
+project-folder/
+
+
+
+index.html
+
+style.css
+README.md
+
+
+
+## Navigation Menu Implementation
+
+The mobile navigation menu is created using the Checkbox Hack method.
+
+### Components Used
+
+1. Hidden Checkbox
+2. Label (Menu Icon)
+3. Navigation Links Container
+
+Example:
+
+```html
+<input type="checkbox" id="menu-toggle">
+
+<label for="menu-toggle" class="menu-btn">
+☰
+</label>
 
 
 
