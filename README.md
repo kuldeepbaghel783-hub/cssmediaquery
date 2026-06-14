@@ -1,83 +1,35 @@
-## Responsive Laundry Service Landing Page
-
-## Project Overview
-
-This project is a responsive Laundry Service Landing Page created using HTML and CSS. The webpage includes a navigation bar, hero section, call-to-action button, and a mobile-friendly navigation menu.
-
-The design adapts to different screen sizes using CSS Media Queries and Flexbox.
-
----
+# Hero Section Animation Project
 
 ## Features
 
-### Desktop View
-- Logo section
-- Navigation links
-  - Home
-  - Services
-  - About Us
-  - Contact Us
-- Username button
-- Hero section with:
-  - Heading
-  - Description
-  - Service booking button
-  - Laundry image
+- Responsive hero section using Flexbox
+- Hero image animation using CSS keyframes
+- Orbit-style movement effect
+- Squeeze and stretch scaling effect
+- Continuous infinite animation
+- No JavaScript used
 
-### Mobile View
-- Navigation links are hidden.
-- Menu icon (☰) is displayed.
-- Clicking the menu icon opens a sidebar menu.
-- Sidebar menu contains:
-  - Home
-  - Services
-  - About Us
-  - Contact Us
-- Built using only HTML and CSS.
-- No JavaScript used.
+## Animation Details
 
----
+The hero image uses the `orbitAnimation` keyframe animation.
+
+Effects included:
+- Rotation (orbit effect)
+- Horizontal and vertical movement
+- Squeeze effect using `scale(x, y)`
+- Smooth infinite looping animation
+
+## How to Run
+
+1. Download all project files.
+2. Place `index.html` and `style.css` in the same folder.
+3. Add the hero image to the project folder.
+4. Open `index.html` in any modern web browser.
+5. The hero image animation will start automatically.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 - Flexbox
-- Media Queries
-
-
-
-## Folder Structure
-
-project-folder/
-
-
-
-index.html
-
-style.css
-README.md
-
-
-
-## Navigation Menu Implementation
-
-The mobile navigation menu is created using the Checkbox Hack method.
-
-### Components Used
-
-1. Hidden Checkbox
-2. Label (Menu Icon)
-3. Navigation Links Container
-
-Example:
-
-```html
-<input type="checkbox" id="menu-toggle">
-
-<label for="menu-toggle" class="menu-btn">
-☰
-</label>
-
-
-
+- CSS Keyframe Animations
