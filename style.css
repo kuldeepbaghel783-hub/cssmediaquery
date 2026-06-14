@@ -74,78 +74,41 @@ body{
 .right{
     flex: 1;
     text-align: center;
-    position: relative;
-}
-
-.right::before{
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: rgba(0, 123, 255, 0.15);
-    border-radius: 50%;
-    filter: blur(80px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: glowMove 6s ease-in-out infinite;
-    z-index: -1;
-}
-
-.right img{
-    max-width: 100%;
-    animation: heroFloat 4s ease-in-out infinite;
-}
-
-@keyframes heroFloat{
-    0%,100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-25px);
-    }
-}
-
-@keyframes glowMove{
-    0%,100%{
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50%{
-        transform: translate(-50%, -50%) scale(1.15);
-    }
-}
-
-.right{
-    flex: 1;
-    text-align: center;
 }
 
 .right img{
     max-width: 100%;
     height: auto;
-    animation: heroFloat 4s ease-in-out infinite;
-    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+    animation: orbitAnimation 6s ease-in-out infinite;
+    transform-origin: center;
 }
 
 /* Hero Image Animation */
-@keyframes heroFloat{
+@keyframes orbitAnimation{
     0%{
-        transform: translateY(0px);
+        transform: translate(0, 0) rotate(0deg) scale(1, 1);
     }
-    25%{
-        transform: translateY(-15px) rotate(2deg);
+
+    20%{
+        transform: translate(15px, -10px) rotate(10deg) scale(1.1, 0.9);
     }
-    50%{
-        transform: translateY(-30px);
+
+    40%{
+        transform: translate(30px, 0) rotate(20deg) scale(0.9, 1.1);
     }
-    75%{
-        transform: translateY(-15px) rotate(-2deg);
+
+    60%{
+        transform: translate(15px, 10px) rotate(10deg) scale(1.1, 0.9);
     }
+
+    80%{
+        transform: translate(-15px, 10px) rotate(-10deg) scale(0.9, 1.1);
+    }
+
     100%{
-        transform: translateY(0px);
+        transform: translate(0, 0) rotate(0deg) scale(1, 1);
     }
 }
-
 
 .left h1{
     font-size:55px;
@@ -188,10 +151,8 @@ body{
 }
 
 
-.right img{
-    width:80%;
-    max-width:500px;
-}
+
+
 
 /* ====================
    MOBILE VIEW
@@ -316,3 +277,4 @@ body{
         font-size:26px;
     }
 }
+      
